@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+body {
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: transparent; }
+
+#wrapper {
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  font-family: "Questrial", sans-serif;
+  line-height: 35px; }
+  #wrapper #chart-container {
+    height: auto;
+    width: fit-content;
+    margin: auto; }
+    #wrapper #chart-container #chart-details {
+      height: auto;
+      width: auto;
+      padding: 5px;
+      position: relative; }
+      #wrapper #chart-container #chart-details p {
+        font-size: 16px;
+        padding: 5px;
+        float: left; }
+      #wrapper #chart-container #chart-details #change {
+        transform: translateY(-100%);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 0 5px; }
+      #wrapper #chart-container #chart-details::after {
+        content: "";
+        clear: both;
+        display: block; }
+    #wrapper #chart-container #panel-container {
+      height: auto;
+      width: fit-content;
+      padding: 5px;
+      align-self: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-end; }
+      #wrapper #chart-container #panel-container .panel {
+        height: min-content;
+        width: auto;
+        padding: 5px;
+        cursor: default;
+        text-align: center;
+        font-size: 13px; }
+        #wrapper #chart-container #panel-container .panel .box {
+          height: 35px;
+          width: 35px;
+          position: relative;
+          overflow: hidden; }
+          #wrapper #chart-container #panel-container .panel .box:hover .model-text {
+            transform: translateY(-100%); }
+          #wrapper #chart-container #panel-container .panel .box:hover .quantity-text {
+            transform: initial; }
+          #wrapper #chart-container #panel-container .panel .box .model-text {
+            background-color: #f9f8f8; }
+          #wrapper #chart-container #panel-container .panel .box .quantity-text {
+            background-color: #262626;
+            color: #f9f8f8;
+            transform: translateY(100%); }
+          #wrapper #chart-container #panel-container .panel .box p {
+            height: inherit;
+            width: inherit;
+            position: absolute;
+            transition: all .25s ease-out; }
+        #wrapper #chart-container #panel-container .panel .size-text {
+          height: 35px;
+          width: 35px;
+          font-weight: 900;
+          border-bottom: 1px solid #262626; }

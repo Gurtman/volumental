@@ -1,0 +1,72 @@
+#wrapper
+  height: auto
+  min-height: 100vh
+  width: 100%
+  position: relative
+  font-family: $questrial
+  line-height: 35px
+  #chart-container
+    height: auto
+    width: fit-content
+    margin: auto
+    #chart-details
+      height: auto
+      width: auto
+      padding: 5px
+      position: relative
+      p
+        font-size: 16px
+        padding: 5px
+        float: left
+      #change
+        transform: translateY(-100%)
+        position: absolute
+        bottom: 0
+        right: 0
+        margin: 0 5px
+      &::after
+        content: ""
+        clear: both
+        display: block
+    #panel-container
+      height: auto
+      width: fit-content
+      padding: 5px
+      align-self: center
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      align-items: flex-end
+      .panel
+        height: min-content
+        width: auto
+        padding: 5px
+        cursor: default
+        text-align: center
+        font-size: 13px
+        .box
+          height: 35px
+          width: 35px
+          position: relative
+          overflow: hidden
+          &:hover
+            .model-text
+              transform: translateY(-100%)
+            .quantity-text
+              transform: initial
+          .model-text
+            background-color: #f9f8f8
+          .quantity-text
+            background-color: #262626
+            color: #f9f8f8
+            transform: translateY(100%)
+          p
+            height: inherit
+            width: inherit
+            position: absolute
+            transition: all .25s ease-out
+        .size-text
+          height: 35px
+          width: 35px
+          font-weight: 900
+          border-bottom: 1px solid #262626
